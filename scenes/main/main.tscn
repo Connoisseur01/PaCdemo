@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bsy4m04gqdyrx"]
+
+[ext_resource type="Script" uid="uid://cy03f005b7hm0" path="res://scripts/menagers/room_manager.gd" id="1_hyk8p"]
+[ext_resource type="PackedScene" uid="uid://y03wsmbquevs" path="res://scenes/ui/dialogue_box.tscn" id="1_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://cp6a8flcd2715" path="res://scenes/rooms/study.tscn" id="2_iuonh"]
+
+[node name="Main" type="Node2D" unique_id=191793128]
+
+[node name="RoomContainer" type="Node2D" parent="." unique_id=236768540]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=358726004]
+
+[node name="DialogueBox" parent="UI" unique_id=580572621 instance=ExtResource("1_k2fmo")]
+
+[node name="RoomManager" type="Node" parent="." unique_id=493991126]
+script = ExtResource("1_hyk8p")
+starting_room = ExtResource("2_iuonh")

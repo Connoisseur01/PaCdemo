@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dh4286hjv5uc0"]
+
+[ext_resource type="Script" uid="uid://jmm087yo58m7" path="res://scripts/objects/interactable_object.gd" id="1_t0syh"]
+[ext_resource type="PackedScene" uid="uid://cutufl7l616to" path="res://scenes/objects/hotspot.tscn" id="2_6ey0n"]
+
+[node name="InteractableObject" type="Node2D" unique_id=1872664979]
+script = ExtResource("1_t0syh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1261693870]
+
+[node name="Hotspot" parent="." unique_id=1326729080 instance=ExtResource("2_6ey0n")]
+
+[editable path="Hotspot"]

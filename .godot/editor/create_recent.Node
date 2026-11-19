@@ -1,0 +1,14 @@
+Sprite2D
+Control
+Panel
+Hotspot
+RichTextLabel
+Label
+VBoxContainer
+MarginContainer
+Node
+CanvasLayer
+Node2D
+CollisionPolygon2D
+CollisionShape2D
+Area2D

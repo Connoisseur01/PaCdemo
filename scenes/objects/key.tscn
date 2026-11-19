@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dtln3c8fxqfo4"]
+
+[ext_resource type="PackedScene" uid="uid://dh4286hjv5uc0" path="res://scenes/objects/interactable_object.tscn" id="1_yhuoy"]
+[ext_resource type="Script" uid="uid://1d3es5glb2t1" path="res://scripts/objects/key.gd" id="2_nghci"]
+[ext_resource type="Texture2D" uid="uid://by7rnqw5xytvm" path="res://assets/objects/key.png" id="2_tfk8p"]
+
+[node name="Key" unique_id=1872664979 instance=ExtResource("1_yhuoy")]
+script = ExtResource("2_nghci")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1261693870]
+position = Vector2(1.9999847, 3.0000153)
+scale = Vector2(0.38142857, 0.378)
+texture = ExtResource("2_tfk8p")
+
+[node name="CollisionPolygon2D" parent="Hotspot" parent_id_path=PackedInt32Array(1326729080) index="0" unique_id=1462987834]
+position = Vector2(263, 158)
+polygon = PackedVector2Array(-56.333336, -68.66667, -122.333336, -57.333336, -123.66667, -42.333336, -55, -42.333336, -50.666668, -56)
+
+[editable path="Hotspot"]

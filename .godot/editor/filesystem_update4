@@ -1,0 +1,15 @@
+res://scenes/objects/hotspot.tscn
+res://scenes/objects/hotspot.gd
+res://scripts/rooms/room.gd
+res://scenes/rooms/study.tscn
+res://scenes/rooms/parlour.tscn
+res://scenes/ui/dialogue_box.tscn
+res://scripts/ui/dialogue_box.gd
+res://scripts/menagers/game_manager.gd
+res://scenes/objects/interactable_object.tscn
+res://scripts/objects/interactable_object.gd
+res://scenes/objects/key.tscn
+res://scripts/objects/key.gd
+res://scripts/objects/door.gd
+res://scenes/objects/lock.tscn
+res://scripts/objects/lock.gd

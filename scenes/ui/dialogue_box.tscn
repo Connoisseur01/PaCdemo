@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://y03wsmbquevs"]
+
+[ext_resource type="Script" uid="uid://mgdgbi1i12o4" path="res://scripts/ui/dialogue_box.gd" id="1_xg44k"]
+
+[node name="DialogueBox" type="Control" unique_id=357763526]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -717.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_xg44k")
+
+[node name="Panel" type="Panel" parent="." unique_id=1753642686]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -100.0
+offset_right = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=680671983]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -98.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1511004226]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ObjectName" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1750180864]
+layout_mode = 2
+
+[node name="Description" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer" unique_id=2014671058]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://jy86ib6nu756"]
+
+[ext_resource type="Script" uid="uid://ba4ahxuvkn8ng" path="res://scripts/rooms/room.gd" id="1_ebo6v"]
+[ext_resource type="Texture2D" uid="uid://de00t8ub05lx" path="res://assets/backgrounds/parlour001.bmp" id="1_pcy62"]
+[ext_resource type="PackedScene" uid="uid://cutufl7l616to" path="res://scenes/objects/hotspot.tscn" id="3_j3mi0"]
+[ext_resource type="PackedScene" uid="uid://dtln3c8fxqfo4" path="res://scenes/objects/key.tscn" id="4_fs2hr"]
+[ext_resource type="PackedScene" uid="uid://by3o0i8j1gpan" path="res://scenes/objects/lock.tscn" id="5_6qwtk"]
+[ext_resource type="Texture2D" uid="uid://bdurct3gpjup7" path="res://assets/objects/padlock-unlocked-outlined-svgrepo-com.svg" id="6_6jf5b"]
+
+[node name="Parlour" type="Node2D" unique_id=263001418]
+script = ExtResource("1_ebo6v")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1830187139]
+scale = Vector2(1.6980132, 1.0651852)
+texture = ExtResource("1_pcy62")
+centered = false
+
+[node name="table" parent="." unique_id=1326729080 instance=ExtResource("3_j3mi0")]
+object_name = "table"
+description = "it's a table :333"
+
+[node name="CollisionPolygon2D" parent="table" index="0" unique_id=1462987834]
+position = Vector2(0.18527985, 4.5776367e-05)
+scale = Vector2(2.9983978, 2.9999995)
+polygon = PackedVector2Array(126.00552, 169.66667, 141.01353, 158, 136.01086, 152.66667, 133.34277, 147, 138.01193, 141.66667, 143.68163, 138.66667, 160.3572, 134.33333, 175.69872, 131.66667, 204.04718, 130, 219.72223, 131, 232.72917, 133.33333, 250.40527, 137.33333, 257.40903, 142.33333, 260.4106, 147.33334, 259.4101, 152.33334, 256.07498, 157, 266.08032, 176, 234.39673, 188, 199.37802, 192.00002, 169.69551, 188, 144.01514, 181)
+
+[node name="door1" parent="." unique_id=75056438 instance=ExtResource("3_j3mi0")]
+object_name = "door"
+description = "does stuff idk"
+destination_room_path = "uid://cp6a8flcd2715"
+
+[node name="CollisionPolygon2D" parent="door1" index="0" unique_id=1462987834]
+polygon = PackedVector2Array(79.333336, 236, 78.333336, -2.6666667, -0.6666667, -2.3333333, -0.6666667, 234)
+
+[node name="chair" parent="." unique_id=325892416 instance=ExtResource("3_j3mi0")]
+position = Vector2(991, 411)
+object_name = "chair"
+description = "dupa dupa"
+
+[node name="CollisionPolygon2D" parent="chair" index="0" unique_id=1462987834]
+polygon = PackedVector2Array(-35.666656, 50, -30.333344, 47.333344, -27.666656, 19, -5.6666565, 15.666672, -3.3333435, 33.333344, 3, 33, 0.3333435, 15.3333435, 9.3333435, 15.3333435, 9, -41.33333, -0.6666565, -32, -11, -8.333328, -48, -7, -51.333344, 0.66667175, -54.333344, 30.333344, -48.666656, 28, -45.666656, 10.3333435, -35, 18)
+
+[node name="Key" parent="." unique_id=1872664979 instance=ExtResource("4_fs2hr")]
+position = Vector2(861, 629)
+
+[node name="lock" parent="." unique_id=1295747593 instance=ExtResource("5_6qwtk")]
+position = Vector2(327, 288)
+unlocked_texture = ExtResource("6_6jf5b")
+
+[editable path="table"]
+[editable path="door1"]
+[editable path="chair"]

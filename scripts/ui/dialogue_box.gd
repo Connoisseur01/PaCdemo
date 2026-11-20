@@ -1,5 +1,7 @@
-
 extends Control
+
+signal dialogue_finished
+signal jumpscare_finished
 
 @onready var speaker_label: Label = $Panel/MarginContainer/VBoxContainer/SpeakerName
 @onready var dialogue_label: RichTextLabel = $Panel/MarginContainer/VBoxContainer/DialogueText
@@ -66,16 +68,11 @@ func end_dialogue() -> void:
 		inspection_image.hide()
 
 	hide()
-
+	dialogue_finished.emit()
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-
-			if jumpscare_active:
-				close_jumpscare()
-				accept_event()
-				return
 
 			if dialogue_active:
 				advance_dialogue()
@@ -104,13 +101,15 @@ func start_inspection(texture: Texture2D, dialogue: Array[Dictionary]) -> void:
 
 	start_dialogue(dialogue)
 	
-func show_jumpscare(message: String) -> void:
+func show_jumpscare(message: String, time: float = 0.8) -> void:
 	jumpscare_active = true
 	jumpscare_text.text = message
 	jumpscare_overlay.show()
 	show()
+	await get_tree().create_timer(time).timeout
 	
-func close_jumpscare() -> void:
 	jumpscare_active = false
 	jumpscare_overlay.hide()
 	hide()
+	jumpscare_finished.emit()
+	

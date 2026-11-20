@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bxts2e8nvt00d"]
+
+[ext_resource type="PackedScene" uid="uid://naxcx2oaamwi" path="res://scenes/objects/inspectable_object.tscn" id="1_ogtu3"]
+[ext_resource type="Texture2D" uid="uid://ccfkv3ofhpkyq" path="res://assets/cursors/default.png" id="2_8a0l2"]
+[ext_resource type="Script" uid="uid://c5g5w4v1lf4up" path="res://scripts/objects/arrow.gd" id="2_nogl7"]
+
+[node name="Arrow" unique_id=1872664979 instance=ExtResource("1_ogtu3")]
+script = ExtResource("2_nogl7")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1261693870]
+texture = ExtResource("2_8a0l2")
+
+[editable path="Hotspot"]

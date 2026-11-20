@@ -4,6 +4,7 @@ class_name Lock
 @export var unlocked_texture: Texture2D
 
 @onready var room_manager = get_node("/root/Main/RoomManager")
+@onready var dialogue_box = get_node("/root/Main/UI/DialogueBox")
 
 var is_unlocked: bool = false
 
@@ -22,14 +23,10 @@ func receive_item(item: InteractableObject) -> bool:
 	if unlocked_texture:
 		change_sprite(unlocked_texture)
 
-	var destination_path = hotspot.destination_room_path
-
-	if destination_path != "":
-		var room_scene = load(destination_path) as PackedScene
-
-		if room_scene:
-			room_manager.change_room(room_scene)
-		else:
-			push_error("Could not load room: " + destination_path)
+	var dialogue: Array[Dictionary] = [
+		{"speaker": "narrator", "text": "The lock has been opened."},
+		{"speaker": "player", "text": "chuj mnie to xd"}
+	]
+	dialogue_box.start_dialogue(dialogue)
 
 	return true

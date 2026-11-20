@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://naxcx2oaamwi"]
+
+[ext_resource type="PackedScene" uid="uid://dh4286hjv5uc0" path="res://scenes/objects/interactable_object.tscn" id="1_68a20"]
+[ext_resource type="Script" uid="uid://i65k83415snd" path="res://scripts/objects/inspectable_object.gd" id="2_68a20"]
+
+[node name="InspectableObject" unique_id=1872664979 instance=ExtResource("1_68a20")]
+script = ExtResource("2_68a20")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1261693870]
+position = Vector2(18, -2.0000057)
+scale = Vector2(5.5625, 4.25)
+
+[node name="CollisionPolygon2D" parent="Hotspot" parent_id_path=PackedInt32Array(1326729080) index="0" unique_id=1462987834]
+position = Vector2(-36, 89)
+polygon = PackedVector2Array(12.333334, -23, 16, -23.333334, 12.666667, -29.333334, 21.333334, -30.000002, 3.333334, -45.333336, 3.666667, -24.666668, 9.333334, -28.666668)
+
+[editable path="Hotspot"]

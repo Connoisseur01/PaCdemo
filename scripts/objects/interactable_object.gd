@@ -4,6 +4,8 @@ class_name InteractableObject
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var hotspot: Hotspot = $Hotspot
 
+
+
 @export_group("Audio")
 @export var interaction_sound: AudioStream
 
@@ -11,7 +13,7 @@ var original_scale: Vector2
 
 func _ready() -> void:
 	original_scale = scale
-
+	
 	hotspot.clicked.connect(_on_clicked)
 	hotspot.hovered.connect(_on_hovered)
 	hotspot.unhovered.connect(_on_unhovered)

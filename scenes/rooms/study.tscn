@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ba4ahxuvkn8ng" path="res://scripts/rooms/room.gd" id="1_d6mv6"]
 [ext_resource type="Texture2D" uid="uid://tc0ttfn5djgs" path="res://assets/backgrounds/interior001.bmp" id="1_pv0ka"]
 [ext_resource type="PackedScene" uid="uid://cutufl7l616to" path="res://scenes/objects/hotspot.tscn" id="2_8mflv"]
-[ext_resource type="Texture2D" uid="uid://ccfkv3ofhpkyq" path="res://assets/cursors/default.png" id="4_d6mv6"]
+[ext_resource type="PackedScene" uid="uid://bxts2e8nvt00d" path="res://scenes/objects/arrow.tscn" id="4_d6mv6"]
 
 [node name="Study" type="Node2D" unique_id=913222513]
 script = ExtResource("1_d6mv6")
@@ -24,17 +24,7 @@ position = Vector2(0, -0.04147339)
 scale = Vector2(3, 3.000339)
 polygon = PackedVector2Array(104, -117.30627, 47, -117.30627, 49.666656, 117.00061, 104, 120.66687)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=245773665]
-position = Vector2(319, 514)
-scale = Vector2(8.875, 7.312503)
-texture = ExtResource("4_d6mv6")
-
-[node name="Hotspot" parent="." unique_id=1874715149 instance=ExtResource("2_8mflv")]
-object_name = "strzaka"
-description = ";3dupa "
-
-[node name="CollisionPolygon2D" parent="Hotspot" index="0" unique_id=1462987834]
-polygon = PackedVector2Array(103.66667, 186, 100.66667, 176.66667, 112.333336, 174, 81.66667, 148.33334, 83.333336, 180.33334, 93.66667, 175, 96.333336, 186.33334)
+[node name="Arrow" parent="." unique_id=1872664979 instance=ExtResource("4_d6mv6")]
+position = Vector2(370, 528)
 
 [editable path="doorHotspot"]
-[editable path="Hotspot"]

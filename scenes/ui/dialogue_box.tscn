@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://y03wsmbquevs"]
 
 [ext_resource type="Script" uid="uid://mgdgbi1i12o4" path="res://scripts/ui/dialogue_box.gd" id="1_xg44k"]
+[ext_resource type="Shader" uid="uid://bb4lgxftb07mc" path="res://scenes/ui/dimmer.gdshader" id="2_6iboe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i0r3h"]
+shader = ExtResource("2_6iboe")
+shader_parameter/blur_amount = 2.5
+shader_parameter/darkness = 0.45
 
 [node name="DialogueBox" type="Control" unique_id=357763526]
 layout_mode = 3
@@ -13,6 +19,31 @@ offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_xg44k")
+
+[node name="Dimmer" type="ColorRect" parent="." unique_id=1483496233]
+material = SubResource("ShaderMaterial_i0r3h")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+
+[node name="InspectionImage" type="TextureRect" parent="." unique_id=1264123573]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Panel" type="Panel" parent="." unique_id=1753642686]
 layout_mode = 1
@@ -43,10 +74,11 @@ mouse_filter = 2
 layout_mode = 2
 mouse_filter = 2
 
-[node name="ObjectName" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1750180864]
+[node name="SpeakerName" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1750180864]
 layout_mode = 2
 
-[node name="Description" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer" unique_id=2014671058]
+[node name="DialogueText" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer" unique_id=2014671058]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
+fit_content = true

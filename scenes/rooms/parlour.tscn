@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtln3c8fxqfo4" path="res://scenes/objects/key.tscn" id="4_fs2hr"]
 [ext_resource type="PackedScene" uid="uid://by3o0i8j1gpan" path="res://scenes/objects/lock.tscn" id="5_6qwtk"]
 [ext_resource type="Texture2D" uid="uid://bdurct3gpjup7" path="res://assets/objects/padlock-unlocked-outlined-svgrepo-com.svg" id="6_6jf5b"]
+[ext_resource type="PackedScene" uid="uid://ciut7362rbk6s" path="res://scenes/objects/chair.tscn" id="7_7qwe2"]
 
 [node name="Parlour" type="Node2D" unique_id=263001418]
 script = ExtResource("1_ebo6v")
@@ -32,14 +33,6 @@ destination_room_path = "uid://cp6a8flcd2715"
 [node name="CollisionPolygon2D" parent="door1" index="0" unique_id=1462987834]
 polygon = PackedVector2Array(79.333336, 236, 78.333336, -2.6666667, -0.6666667, -2.3333333, -0.6666667, 234)
 
-[node name="chair" parent="." unique_id=325892416 instance=ExtResource("3_j3mi0")]
-position = Vector2(991, 411)
-object_name = "chair"
-description = "dupa dupa"
-
-[node name="CollisionPolygon2D" parent="chair" index="0" unique_id=1462987834]
-polygon = PackedVector2Array(-35.666656, 50, -30.333344, 47.333344, -27.666656, 19, -5.6666565, 15.666672, -3.3333435, 33.333344, 3, 33, 0.3333435, 15.3333435, 9.3333435, 15.3333435, 9, -41.33333, -0.6666565, -32, -11, -8.333328, -48, -7, -51.333344, 0.66667175, -54.333344, 30.333344, -48.666656, 28, -45.666656, 10.3333435, -35, 18)
-
 [node name="Key" parent="." unique_id=1872664979 instance=ExtResource("4_fs2hr")]
 position = Vector2(861, 629)
 
@@ -47,6 +40,12 @@ position = Vector2(861, 629)
 position = Vector2(327, 288)
 unlocked_texture = ExtResource("6_6jf5b")
 
+[node name="Chair" parent="." unique_id=138779431 instance=ExtResource("7_7qwe2")]
+
+[node name="CollisionPolygon2D" parent="Chair/Hotspot" parent_id_path=PackedInt32Array(138779431, 1326729080) index="0" unique_id=1462987834]
+polygon = PackedVector2Array(295.33334, 181.66667, 299.33334, 179, 302.00003, 148.66667, 324.6667, 150, 326.6667, 167.33334, 332.33334, 167.33334, 330.00003, 150, 339.6667, 148.66667, 338.33334, 92.66667, 320.00003, 125.33334, 278.6667, 128.33334, 276.00003, 161.66667, 280.33334, 162.33334, 284.33334, 142.66667, 295.33334, 148.66667)
+
 [editable path="table"]
 [editable path="door1"]
-[editable path="chair"]
+[editable path="Chair"]
+[editable path="Chair/Hotspot"]

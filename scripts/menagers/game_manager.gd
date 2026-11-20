@@ -3,6 +3,7 @@ extends Node
 
 var flags: Dictionary = {}
 
+
 func set_flag(flag_name: String, value: bool = true) -> void:
 	flags[flag_name] = value
 	print("Game flag changed: ", flag_name, " = ", value)

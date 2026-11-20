@@ -7,6 +7,9 @@ var starting_position: Vector2
 
 func _ready() -> void:
 	super._ready()
+	if GameManager.get_flag("lock_unlocked"):
+		queue_free()
+		return
 	starting_position = global_position
 
 

@@ -5,7 +5,10 @@ extends Control
 @onready var dialogue_label: RichTextLabel = $Panel/MarginContainer/VBoxContainer/DialogueText
 @onready var dimmer: ColorRect = $Dimmer
 @onready var inspection_image: TextureRect = $InspectionImage
+@onready var jumpscare_overlay: ColorRect = $JumpscareOverlay
+@onready var jumpscare_text: Label = $JumpscareOverlay/JumpscareText
 
+var jumpscare_active: bool = false
 var inspection_active: bool = false
 var dialogue_lines: Array[Dictionary] = []
 var current_line: int = 0
@@ -16,6 +19,7 @@ func _ready() -> void:
 	hide()
 	dimmer.hide()
 	inspection_image.hide()
+	jumpscare_overlay.hide()
 	
 	dialogue_label.fit_content = true
 	dialogue_label.scroll_active = false
@@ -65,13 +69,17 @@ func end_dialogue() -> void:
 
 
 func _gui_input(event: InputEvent) -> void:
-	if not dialogue_active:
-		return
-
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			advance_dialogue()
-			accept_event()
+
+			if jumpscare_active:
+				close_jumpscare()
+				accept_event()
+				return
+
+			if dialogue_active:
+				advance_dialogue()
+				accept_event()
 
 
 func show_text(title: String, message: String) -> void:
@@ -90,10 +98,19 @@ func start_inspection(texture: Texture2D, dialogue: Array[Dictionary]) -> void:
 		return
 
 	inspection_active = true
-
 	inspection_image.texture = texture
-
 	dimmer.show()
 	inspection_image.show()
 
 	start_dialogue(dialogue)
+	
+func show_jumpscare(message: String) -> void:
+	jumpscare_active = true
+	jumpscare_text.text = message
+	jumpscare_overlay.show()
+	show()
+	
+func close_jumpscare() -> void:
+	jumpscare_active = false
+	jumpscare_overlay.hide()
+	hide()

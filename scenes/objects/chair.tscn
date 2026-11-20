@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ciut7362rbk6s"]
+
+[ext_resource type="PackedScene" uid="uid://dh4286hjv5uc0" path="res://scenes/objects/interactable_object.tscn" id="1_r1c1s"]
+[ext_resource type="Script" uid="uid://bu1kre6n4jncm" path="res://scripts/objects/chair.gd" id="2_pmpg8"]
+
+[node name="Chair" unique_id=1872664979 instance=ExtResource("1_r1c1s")]
+script = ExtResource("2_pmpg8")
+
+[editable path="Hotspot"]

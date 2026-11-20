@@ -8,6 +8,13 @@ class_name Lock
 
 var is_unlocked: bool = false
 
+func _ready() -> void:
+	super._ready()
+
+	is_unlocked = GameManager.get_flag("lock_unlocked")
+
+	if is_unlocked and unlocked_texture:
+		change_sprite(unlocked_texture)
 
 func receive_item(item: InteractableObject) -> bool:
 	if is_unlocked:
@@ -19,7 +26,8 @@ func receive_item(item: InteractableObject) -> bool:
 	print("Door unlocked!")
 
 	is_unlocked = true
-
+	GameManager.set_flag("lock_unlocked")
+	
 	if unlocked_texture:
 		change_sprite(unlocked_texture)
 

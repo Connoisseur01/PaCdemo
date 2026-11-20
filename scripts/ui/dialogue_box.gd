@@ -101,7 +101,7 @@ func start_inspection(texture: Texture2D, dialogue: Array[Dictionary]) -> void:
 
 	start_dialogue(dialogue)
 	
-func show_jumpscare(message: String, time: float = 0.8) -> void:
+func show_jumpscare(message: String, time: float = 1.0) -> void:
 	jumpscare_active = true
 	jumpscare_text.text = message
 	jumpscare_overlay.show()

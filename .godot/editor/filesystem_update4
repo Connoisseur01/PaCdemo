@@ -1,11 +1,3 @@
-res://scenes/objects/lock.tscn
-res://scenes/ui/dimmer.gdshader
-res://scripts/menagers/game_manager.gd
-res://scripts/objects/lock.gd
-res://scenes/ui/dialogue_box.tscn
-res://scripts/ui/dialogue_box.gd
-res://scripts/objects/chair.gd
 res://scenes/rooms/parlour.tscn
-res://scenes/objects/chair.tscn
-res://scenes/objects/key.tscn
-res://scripts/objects/key.gd
+res://scenes/ui/dimmer.gdshader
+res://scripts/ui/dialogue_box.gd

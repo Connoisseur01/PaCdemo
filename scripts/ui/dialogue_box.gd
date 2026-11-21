@@ -79,16 +79,11 @@ func _gui_input(event: InputEvent) -> void:
 				accept_event()
 
 
-func show_text(title: String, message: String) -> void:
+func show_text(speaker: String, message: String) -> void:
 	start_dialogue([
-		{"speaker": title, "text": message}
+		{"speaker": speaker, "text": message}
 	])
 
-
-func show_description(hotspot: Hotspot) -> void:
-	start_dialogue([
-		{"speaker": hotspot.object_name, "text": hotspot.description}
-	])
 	
 func start_inspection(texture: Texture2D, dialogue: Array[Dictionary]) -> void:
 	if texture == null or dialogue == null:

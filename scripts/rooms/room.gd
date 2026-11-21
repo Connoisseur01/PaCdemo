@@ -16,7 +16,6 @@ func _ready() -> void:
 		hotspot.clicked.connect(_on_hotspot_clicked)
 		hotspot.hovered.connect(_on_hotspot_hovered)
 		hotspot.unhovered.connect(_on_hotspot_unhovered)
-	
 
 
 func _on_hotspot_clicked(hotspot: Hotspot) -> void:
@@ -35,8 +34,9 @@ func _on_hotspot_clicked(hotspot: Hotspot) -> void:
 			push_error("Could not load room: " + hotspot.destination_room_path)
 
 		return
+	
 
-	dialogue_box.show_description(hotspot)
+	#dialogue_box.show_description(hotspot)
 
 
 func _on_hotspot_hovered(hotspot: Hotspot) -> void:

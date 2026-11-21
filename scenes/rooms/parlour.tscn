@@ -16,15 +16,6 @@ scale = Vector2(1.6980132, 1.0651852)
 texture = ExtResource("1_pcy62")
 centered = false
 
-[node name="table" parent="." unique_id=1326729080 instance=ExtResource("3_j3mi0")]
-object_name = "table"
-description = "it's a table :333"
-
-[node name="CollisionPolygon2D" parent="table" index="0" unique_id=1462987834]
-position = Vector2(0.18527985, 4.5776367e-05)
-scale = Vector2(2.9983978, 2.9999995)
-polygon = PackedVector2Array(126.00552, 169.66667, 141.01353, 158, 136.01086, 152.66667, 133.34277, 147, 138.01193, 141.66667, 143.68163, 138.66667, 160.3572, 134.33333, 175.69872, 131.66667, 204.04718, 130, 219.72223, 131, 232.72917, 133.33333, 250.40527, 137.33333, 257.40903, 142.33333, 260.4106, 147.33334, 259.4101, 152.33334, 256.07498, 157, 266.08032, 176, 234.39673, 188, 199.37802, 192.00002, 169.69551, 188, 144.01514, 181)
-
 [node name="door1" parent="." unique_id=75056438 instance=ExtResource("3_j3mi0")]
 object_name = "door"
 description = "does stuff idk"
@@ -45,7 +36,6 @@ unlocked_texture = ExtResource("6_6jf5b")
 [node name="CollisionPolygon2D" parent="Chair/Hotspot" parent_id_path=PackedInt32Array(138779431, 1326729080) index="0" unique_id=1462987834]
 polygon = PackedVector2Array(295.33334, 181.66667, 299.33334, 179, 302.00003, 148.66667, 324.6667, 150, 326.6667, 167.33334, 332.33334, 167.33334, 330.00003, 150, 339.6667, 148.66667, 338.33334, 92.66667, 320.00003, 125.33334, 278.6667, 128.33334, 276.00003, 161.66667, 280.33334, 162.33334, 284.33334, 142.66667, 295.33334, 148.66667)
 
-[editable path="table"]
 [editable path="door1"]
 [editable path="Chair"]
 [editable path="Chair/Hotspot"]

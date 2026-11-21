@@ -1,3 +1,8 @@
 res://scenes/rooms/parlour.tscn
 res://scenes/ui/dimmer.gdshader
 res://scripts/ui/dialogue_box.gd
+res://scenes/main/main.tscn
+res://scripts/menagers/room_manager.gd
+res://scenes/objects/hotspot.tscn
+res://scenes/objects/hotspot.gd
+res://scripts/rooms/room.gd
